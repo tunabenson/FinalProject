@@ -8,6 +8,7 @@ public class Product {
     private int stockQuantity;
 
 
+
     public Product(String name, String category, double price, String description, int stockQuantity){
         this.name = name;
         this.category = category;
@@ -17,14 +18,21 @@ public class Product {
     }
     public Product(String name){
         this.name = name;
-        this.category = "unknown";
-        this.description = null;
-        this.price = 0;
-        this.stockQuantity = 0;
+
     }
+
+    public Product(String category, int stockQuantity){
+        this.category = category;
+        this.stockQuantity = stockQuantity;
+    }
+
 
     public String getName() {
         return name;
+    }
+
+    public int getStockQuantity() {
+        return stockQuantity;
     }
 
     public String getCategory() {
@@ -36,4 +44,10 @@ public class Product {
     public String toString() {
         return null;
     }
+
+
+
+
+
 }
+
