@@ -1,12 +1,11 @@
-import structs.Heap;
-import structs.LinkedList;
+package user;
 
 public abstract class User {
 
-    private String firstName;
-    private String lastName;
-    private String email;
-    private String password;
+    protected String firstName;
+    protected String lastName;
+    protected String email;
+    protected String password;
 
 
 
@@ -53,5 +52,12 @@ public abstract class User {
         return hash;
     }
 
-
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == this) return true;
+        else if(!(obj instanceof User)) return false;
+        User user = (User) obj;
+        if(user.email.equals(this.email) && passwordMatch(user.password)) return true;
+        return false;
+    }
 }

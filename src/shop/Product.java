@@ -1,3 +1,4 @@
+package shop;
 
 public class Product {
 
@@ -42,12 +43,18 @@ public class Product {
 
     @Override
     public String toString() {
-        return null;
+        StringBuilder builder = new StringBuilder();
+        builder.append("Product: ").append(name).append("\n")
+                .append("Category: ").append(category).append("\n")
+                .append("Price: $").append(String.format("%.2f", price)).append("\n")
+                .append("Stock: ").append(stockQuantity).append(" units\n")
+                .append("Description: ").append(description).append("\n");
+        return builder.toString();
     }
 
 
-
-
-
+    public void updateStock(int stock) {
+        this.stockQuantity += stock;
+    }
 }
 

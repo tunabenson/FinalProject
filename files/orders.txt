@@ -1,0 +1,15 @@
+2
+1001
+john@example.com
+1
+2
+Classic Skateboard
+1
+Speed Wheels
+4
+1002
+jane@example.com
+2
+1
+Grind Trucks
+2
