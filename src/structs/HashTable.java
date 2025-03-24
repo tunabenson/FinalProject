@@ -4,6 +4,7 @@ package structs; /**
  * CIS 22C, Lab 13.2
  */
 import structs.LinkedList;
+import user.Employee;
 
 import java.util.ArrayList;
 
@@ -96,6 +97,8 @@ public class HashTable<T> {
         bucket.advanceIteratorToIndex(objIndex);
         return bucket.getIterator();
     }
+
+
 
     /**
      * Accesses a specified element in the table.

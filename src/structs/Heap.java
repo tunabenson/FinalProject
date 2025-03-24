@@ -33,6 +33,11 @@ public class Heap<T> {
         buildHeap();
     }
 
+    public boolean isEmpty(){
+        return heap.isEmpty();
+    }
+
+
     /**Mutators*/
 
     /**
