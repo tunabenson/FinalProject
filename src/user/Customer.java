@@ -47,7 +47,70 @@ public class Customer extends User {
         myCurrentOrders.addLast(order);
     }
 
+    public void setFirstName(String firstName){
+        this.firstName = firstName;
+    }
 
+    public void setLastName(String lastName){
+        this.lastName = lastName;
+    }
+
+    public void setEmail(String email){
+        this.email = email;
+    }
+
+    public void setPassword(String password){
+        this.password = password;
+    }
+
+    public void setAddress(String address){
+        this.address = address;
+    }
+
+    public void setCity(String city){
+        this.city = city;
+    }
+
+    public void setState(String state){
+        this.state = state;
+    }
+
+    public void setZip(String zip){
+        this.zip = zip;
+    }
+
+    // GETTERS
+    public void getFirstName(String firstName){
+        return firstName;
+    }
+
+    public void setLastName(String lastName){
+        return lastName;
+    }
+
+    public void setEmail(String email){
+        return email;
+    }
+
+    public void setPassword(String password){
+        return password;
+    }
+
+    public void setAddress(String address){
+        return address;
+    }
+
+    public void setCity(String city){
+        return city;
+    }
+
+    public void setState(String state){
+        return state;
+    }
+
+    public void setZip(String zip){
+        return zip;
+    }
 
 
 
@@ -77,5 +140,13 @@ public class Customer extends User {
         return false;
     }
 
-
+    @Override
+    public String toString(){
+        String toString = "";
+        toString += firstName + " " + lastName + "\n";
+        toString += address + "," + city + "," + state += "," + zip + "\n";
+        toString += email + "\n";
+        toString += password + "\n";
+        return toString;
+    }
 }
