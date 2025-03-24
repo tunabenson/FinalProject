@@ -8,6 +8,7 @@ import user.Employee;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;
@@ -135,6 +136,20 @@ public class FileHandler {
             return new PriorityQueue<>(new OrderComparator(), orderList);
         } catch (FileNotFoundException e) {
             throw new RuntimeException("loadOrderFile(): file does not exist");
+        }
+    }
+
+    public static void writeCustomerFile(HashTable<Customer> customers){
+         try {
+             File file = new File("files/customers.txt");
+             PrintWriter writer = new PrintWriter(file);
+             int numCustomers = customers.getNumElements();
+             writer.println(numCustomers); //Number of customers
+
+             writer.println(customers.toString());
+             writer.close();
+         } catch (FileNotFoundException e) {
+            throw new RuntimeException("writeCustomerFile(): file does not exist");
         }
     }
 
