@@ -80,35 +80,35 @@ public class Customer extends User {
     }
 
     // GETTERS
-    public void getFirstName(String firstName){
+    public String getFirstName(String firstName){
         return firstName;
     }
 
-    public void setLastName(String lastName){
+    public String getLastName(String lastName){
         return lastName;
     }
 
-    public void setEmail(String email){
+    public String getEmail(String email){
         return email;
     }
 
-    public void setPassword(String password){
+    public String getPassword(String password){
         return password;
     }
 
-    public void setAddress(String address){
+    public String getAddress(String address){
         return address;
     }
 
-    public void setCity(String city){
+    public String getCity(String city){
         return city;
     }
 
-    public void setState(String state){
+    public String getState(String state){
         return state;
     }
 
-    public void setZip(String zip){
+    public String getZip(String zip){
         return zip;
     }
 
@@ -144,7 +144,7 @@ public class Customer extends User {
     public String toString(){
         String toString = "";
         toString += firstName + " " + lastName + "\n";
-        toString += address + "," + city + "," + state += "," + zip + "\n";
+        toString += address + "," + city + "," + state + "," + zip + "\n";
         toString += email + "\n";
         toString += password + "\n";
         return toString;
